@@ -61,10 +61,26 @@
         *   [Установка MAVROS](https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf-RPi-OS-Setup/Tf-RPi-OS-Setup.html#install-mavros)
         *   [Настройка PX4 SITL с Gazebo](https://docs.px4.io/main/en/dev_setup/building_px4.html)
 
-### 2. **Сборка ROS 2 пакетов**
-
-Перейдите в корневую директорию репозитория (где находится `src/` папка) и выполните сборку с помощью `colcon`:
-
+ ## **Запуск симуляции PX4 и Gazebo**
 ```bash
-colcon build --symlink-install
-source install/setup.bash
+PX4_SYS_AUTOSTART=10017 PX4_GZ_WORLD_NAME=world_with_obstacles.world
+PX4_GZ_MODEL_NAME=iris make px4_sitl_gazebo
+```
+
+# **Запуск одного из контроллеров**
+
+# Для контроллера A*
+ros2 run uav_navigation_pkg a_star_controller.py
+ros2 run uav_navigation_pkg a_star_tree_controller.py
+
+# Для контроллера JPS
+ros2 run uav_navigation_pkg jps_controller.py
+ros2 run uav_navigation_pkg jps_tree_controller.py
+
+# Для контроллера DWA
+ros2 run uav_navigation_pkg dwa_controller.py
+ros2 run uav_navigation_pkg dwa_tree_controller.py
+
+# Для контроллера VFH
+ros2 run uav_navigation_pkg VFH_controller.py
+ros2 run uav_navigation_pkg VFH_tree_controller.py
