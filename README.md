@@ -70,17 +70,17 @@ PX4_GZ_MODEL_NAME=iris make px4_sitl_gazebo
 # **Запуск одного из контроллеров**
 
 ### Для контроллера A*
-ros2 run uav_navigation_pkg a_star_controller.py
-ros2 run uav_navigation_pkg a_star_tree_controller.py
+  * ros2 run uav_navigation_pkg a_star_controller.py
+  * ros2 run uav_navigation_pkg a_star_tree_controller.py
 
 ### Для контроллера JPS
-ros2 run uav_navigation_pkg jps_controller.py
-ros2 run uav_navigation_pkg jps_tree_controller.py
+  * ros2 run uav_navigation_pkg jps_controller.py
+  * ros2 run uav_navigation_pkg jps_tree_controller.py
 
 ### Для контроллера DWA
-ros2 run uav_navigation_pkg dwa_controller.py
-ros2 run uav_navigation_pkg dwa_tree_controller.py
+  * ros2 run uav_navigation_pkg dwa_controller.py
+  * ros2 run uav_navigation_pkg dwa_tree_controller.py
 
 ### Для контроллера VFH
-ros2 run uav_navigation_pkg VFH_controller.py
-ros2 run uav_navigation_pkg VFH_tree_controller.py
+  * ros2 run uav_navigation_pkg VFH_controller.py
+  * ros2 run uav_navigation_pkg VFH_tree_controller.py
